@@ -46,6 +46,8 @@ vim.g.maplocalleader = ' '
 vim.opt.guicursor = 'n-v-c-i:block'
 vim.opt.tabstop = 2
 vim.wo.relativenumber = true
+
+
 -- [[ Install `lazy.nvim` plugin manager ]]
 --    https://github.com/folke/lazy.nvim
 --    `:help lazy.nvim.txt` for more info
@@ -192,11 +194,14 @@ require('lazy').setup({
   },
 
   {
-    -- Theme inspired by Atom
-    'navarasu/onedark.nvim',
+    'ribru17/bamboo.nvim',
+    lazy = false,
     priority = 1000,
     config = function()
-      vim.cmd.colorscheme 'onedark'
+      require('bamboo').setup {
+        -- optional configuration here
+      }
+      require('bamboo').load()
     end,
   },
 
