@@ -10,6 +10,9 @@ mkdir -p  user/{arch/{aur,standalone},bin,books,dev,notes,tmp}
 
 # Create Symlinks
 ln -s $(pwd)/config/nvim/ $HOME/.config/
+#This requires to download Powerlevel10k
+ln -s $(pwd)/config/.zshrc $HOME/
+ln -s $(pwd)/config/.tmux.conf $HOME/
 
 cat << EOF
 Next steps:
