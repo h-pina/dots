@@ -45,6 +45,7 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 vim.opt.guicursor = 'n-v-c-i:block'
 vim.opt.tabstop = 2
+vim.opt.shiftwidth = 2
 vim.wo.relativenumber = true
 
 
