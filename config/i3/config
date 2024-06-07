@@ -21,7 +21,7 @@ exec --no-startup-id nm-applet
 #============================  Keyboard bindings and settings ============================
 
 #Change Keyboard Layout 
-exec "setxkbmap -model abnt2 -layout br"
+#exec "setxkbmap -model abnt2 -layout br"
 
 #pactl for audio 
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -36,7 +36,7 @@ bindsym XF86MonBrightnessUp exec brightnessctl set +5%
 
 #=================================== Key combinations =======================================
 #set win key as mod
-set $mod Mod4
+set $mod Mod1
 
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal

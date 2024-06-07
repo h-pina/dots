@@ -4,15 +4,15 @@
 #Download Dotfiles and create symlinks
 
 #Create user
-rm -rf Desktop Documents Downloads Pictures Movies
-mkdir -p  user/{arch/{aur,standalone},bin,books,dev,notes,tmp}
+#rm -rf Desktop Documents Downloads Pictures Movies
+#mkdir -p  user/{arch/{aur,standalone},bin,books,dev,notes,tmp}
 
 
 # Create Symlinks
-ln -s $(pwd)/config/nvim/ $HOME/.config/
+ln -sf $(pwd)/config/nvim/ $HOME/.config/
 #This requires to download Powerlevel10k
-ln -s $(pwd)/config/.zshrc $HOME/
-ln -s $(pwd)/config/.tmux.conf $HOME/
+ln -sf $(pwd)/config/.zshrc $HOME/
+ln -sf $(pwd)/config/.tmux.conf $HOME/
 
 cat << EOF
 Next steps:

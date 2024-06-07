@@ -38,7 +38,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 
 # Uncomment the following line to change how often to auto-update (in days).
-# zstyle ':omz:update' frequency 13
+# zstyle ':omz:update' frequency 14
 
 # Uncomment the following line if pasting URLs and other text is messed up.
 # DISABLE_MAGIC_FUNCTIONS="true"
@@ -79,7 +79,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git fzf)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -113,14 +113,30 @@ function cs() {
   cd "$@" && ls 
 }
 
+function pdf(){
+	evince $@ & disown
+}
+
+function kb(){
+	setxkbmap $@
+}
+
 alias vim="nvim"
-alias cs="cs"
 alias zshrc="vim ~/.zshrc"
 alias clearVimSwap="rm -rf ~/.local/state/nvim/swap/"
-alias notes="vim ~/user/notes/brainDump.md"
-alias dots="cd ~/user/dev/self/dots"
+alias notes="cd ~/u/notes/"
+alias bnotes="vim ~/u/notes/brain_dump.md"
+alias bookmarks="vim ~/u/notes/bookmarks.md"
+alias tmp="cd ~/u/tmp/"
+
+
 
 export EDITOR=vim
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
