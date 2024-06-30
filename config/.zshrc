@@ -125,7 +125,7 @@ alias vim="nvim"
 alias zshrc="vim ~/.zshrc"
 alias clearVimSwap="rm -rf ~/.local/state/nvim/swap/"
 alias notes="cd ~/u/notes/"
-alias bnotes="vim ~/u/notes/brain_dump.md"
+alias projects="vim ~/u/notes/project_ideas.md"
 alias bookmarks="vim ~/u/notes/bookmarks.md"
 alias tmp="cd ~/u/tmp/"
 
