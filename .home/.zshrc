@@ -12,6 +12,7 @@ fi
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
+PATH=$PATH:~/u/dev/projs/wip/lifeManager/poc/
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -105,10 +106,7 @@ source $ZSH/oh-my-zsh.sh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 #
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-
+# Aliases
 function cs() {
   cd "$@" && ls 
 }
@@ -127,8 +125,11 @@ alias clearVimSwap="rm -rf ~/.local/state/nvim/swap/"
 alias notes="cd ~/u/notes/"
 alias projects="vim ~/u/notes/project_ideas.md"
 alias bookmarks="vim ~/u/notes/bookmarks.md"
+alias dev="cd ~/u/dev/projs/wip/"
 alias tmp="cd ~/u/tmp/"
-
+alias todo="vim ~/u/notes/todo.md"
+alias mon="xrandr --auto;xrandr --output eDP-1 --off"
+alias precalc="pdf ~/u/books/math/precalc/szprecalculus07042013.pdf"
 
 
 export EDITOR=vim
